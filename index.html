@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository | Mobile JKN Review LDA Analysis - Kelompok 7 TOPSUS</title>
+    
+    <!-- Meta Tag SEO -->
+    <meta name="description" content="Repositori GitHub Capstone Project Kelompok 7 TOPSUS: Analisis Topik Ulasan Pengguna Aplikasi Mobile JKN Menggunakan Latent Dirichlet Allocation (LDA) & Streamlit Dashboard. Program Studi Sistem Informasi UIN Syarif Hidayatullah Jakarta.">
+    <meta name="keywords" content="Mobile JKN, LDA Topic Modeling, GitHub Repository, Python, Streamlit, NLP, Capstone Project, UIN Syarif Hidayatullah Jakarta">
+    <meta name="author" content="Kelompok 7 TOPSUS (Kelas 7B)">
+    <meta name="robots" content="index, follow">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cozy: {
+                            bg: '#0d1117',        // GitHub Dark BG
+                            card: '#161b22',      // GitHub Card BG
+                            text: '#c9d1d9',      // Text main
+                            muted: '#8b949e',     // Text secondary
+                            accent: '#238636',    // GitHub Green Accent
+                            border: '#30363d',    // Dark Border
+                            highlight: '#58a6ff'  // Link Blue
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-cozy-bg text-cozy-text font-sans min-h-screen flex flex-col justify-between antialiased selection:bg-emerald-900 selection:text-emerald-100">
+
+    <!-- Header / Navbar Semantik -->
+    <header class="w-full bg-cozy-card/90 backdrop-blur-md border-b border-cozy-border sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-github text-2xl text-white"></i>
+                <span class="font-mono font-semibold text-sm sm:text-base text-white tracking-tight">kelompok7-topsus / mobile-jkn-lda</span>
+                <span class="text-xs bg-cozy-border px-2 py-0.5 rounded-full text-cozy-muted border border-stone-700">Public</span>
+            </div>
+            <nav class="flex items-center space-x-4">
+                <a href="#panduan" class="hidden sm:inline-block text-xs font-medium text-cozy-muted hover:text-white transition-colors">Panduan Setup</a>
+                <a href="#struktur" class="hidden sm:inline-block text-xs font-medium text-cozy-muted hover:text-white transition-colors">Struktur Kode</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-white bg-cozy-accent hover:bg-emerald-600 transition-colors px-3.5 py-1.5 rounded-lg flex items-center gap-1.5">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <span>Fork Repo</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section Repositori -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-cozy-border bg-gradient-to-b from-stone-900/40 to-cozy-bg">
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-md text-xs font-mono">Python 3.10+</span>
+                    <span class="px-2.5 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-md text-xs font-mono">Streamlit</span>
+                    <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-md text-xs font-mono">Gensim LDA</span>
+                    <span class="px-2.5 py-1 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-md text-xs font-mono">CRISP-DM</span>
+                </div>
+                
+                <h1 class="text-2xl sm:text-4xl font-semibold text-white tracking-tight leading-tight">
+                    Analisis Topik Ulasan Mobile JKN Menggunakan LDA & Streamlit Dashboard
+                </h1>
+                
+                <p class="text-cozy-muted text-sm sm:text-base leading-relaxed">
+                    Repositori resmi untuk Capstone Project Kelompok 7 TOPSUS (Kelas 7B). Proyek ini melakukan scraping, preprocessing, pemodelan topik ulasan pengguna aplikasi Mobile JKN (versi 4.18.0) di Google Play Store, serta visualisasi eksploratif berbasis Streamlit.
+                </p>
+
+                <!-- Stats / Quick Info -->
+                <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-cozy-muted font-mono">
+                    <div class="flex items-center gap-1.5"><i class="fa-regular fa-star text-amber-400"></i> Capstone 2026</div>
+                    <div class="flex items-center gap-1.5"><i class="fa-solid fa-graduation-cap text-cozy-highlight"></i> SI UIN Syarif Hidayatullah Jakarta</div>
+                    <div class="flex items-center gap-1.5"><i class="fa-solid fa-users text-emerald-400"></i> Kelompok 7 TOPSUS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorial: Apakah Perlu Coding & Cara Membuat Repo -->
+        <section id="panduan" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+            
+            <!-- Penjelasan "Apakah Perlu Coding?" -->
+            <div class="bg-cozy-card border border-cozy-border rounded-xl p-6 space-y-4">
+                <div class="flex items-center gap-3 border-b border-cozy-border pb-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h2 class="text-lg font-semibold text-white">Apakah Proyek Repositori Ini Perlu Coding?</h2>
+                </div>
+                
+                <div class="text-sm space-y-3 leading-relaxed text-cozy-text">
+                    <p>
+                        <strong class="text-emerald-400">Ya, perlu coding (Python)!</strong> Namun struktur programnya sudah terbagi menjadi beberapa modul utama secara modular:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-cozy-muted pl-2">
+                        <li><strong class="text-white font-mono">Scraping Data:</strong> Menggunakan library <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">google-play-scraper</code> untuk mengambil ulasan terbaru versi 4.18.0.</li>
+                        <li><strong class="text-white font-mono">Data Preprocessing:</strong> Menggunakan <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">NLTK</code> & <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">Sastrawi</code> untuk Cleansing, Lowercasing, Stopwords removal, dan Stemming Bahasa Indonesia.</li>
+                        <li><strong class="text-white font-mono">Pemodelan LDA:</strong> Menggunakan <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">Gensim</code> untuk ekstraksi topik dan kalkulasi <em>Coherence Score ($C_v$)</em>.</li>
+                        <li><strong class="text-white font-mono">Dashboard Interaktif:</strong> Menggunakan <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">Streamlit</code> dan <code class="bg-cozy-border text-emerald-300 px-1.5 py-0.5 rounded font-mono text-xs">pyLDAvis</code> untuk menyajikan hasil analisis kepada pengguna.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Langkah-langkah Membangun Repositori GitHub -->
+            <div class="bg-cozy-card border border-cozy-border rounded-xl p-6 space-y-6">
+                <div class="border-b border-cozy-border pb-3">
+                    <h2 class="text-lg font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-cozy-highlight"></i>
+                        Langkah Membangun Repositori GitHub
+                    </h2>
+                    <p class="text-xs text-cozy-muted mt-1">Panduan praktis mengunggah dan mengelola repositori proyek kelompok di GitHub</p>
+                </div>
+
+                <div class="space-y-6 font-mono text-xs">
+                    <!-- Step 1 -->
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-sans">1</span>
+                            <span>Buat Repositori Baru di GitHub</span>
+                        </div>
+                        <p class="text-cozy-muted font-sans pl-7">Buka GitHub.com &rarr; Klik tombol <strong class="text-white">"New Repository"</strong> &rarr; Beri nama <code class="text-emerald-400">mobile-jkn-lda-dashboard</code> &rarr; Pilih Public &rarr; Centang <em class="text-stone-300">Add a README file</em>.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-sans">2</span>
+                            <span>Clone Repositori ke Komputer Lokal</span>
+                        </div>
+                        <div class="pl-7">
+                            <div class="bg-stone-900 border border-cozy-border rounded-lg p-3 text-emerald-300 overflow-x-auto">
+                                <code>git clone https://github.com/username-anda/mobile-jkn-lda-dashboard.git</code><br>
+                                <code>cd mobile-jkn-lda-dashboard</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-sans">3</span>
+                            <span>Buat File <code class="text-amber-300">requirements.txt</code></span>
+                        </div>
+                        <p class="text-cozy-muted font-sans pl-7">Daftar pustaka Python yang dibutuhkan oleh proyek ini:</p>
+                        <div class="pl-7">
+                            <pre class="bg-stone-900 border border-cozy-border rounded-lg p-3 text-stone-300 overflow-x-auto">streamlit
+gensim
+nltk
+Sastrawi
+pandas
+matplotlib
+pyLDAvis
+google-play-scraper</pre>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-white font-semibold text-sm">
+                            <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-sans">4</span>
+                            <span>Commit & Push Kode ke GitHub</span>
+                        </div>
+                        <div class="pl-7">
+                            <div class="bg-stone-900 border border-cozy-border rounded-lg p-3 text-emerald-300 overflow-x-auto">
+                                <code>git add .</code><br>
+                                <code>git commit -m "feat: Add LDA model and Streamlit dashboard codebase"</code><br>
+                                <code>git push origin main</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Struktur Folder Proyek -->
+            <div id="struktur" class="bg-cozy-card border border-cozy-border rounded-xl p-6 space-y-4">
+                <h2 class="text-lg font-semibold text-white flex items-center gap-2">
+                    <i class="fa-regular fa-folder-open text-amber-400"></i>
+                    Struktur Folder Repositori Proyek
+                </h2>
+                <div class="bg-stone-900 border border-cozy-border rounded-lg p-4 font-mono text-xs text-stone-300 overflow-x-auto leading-relaxed">
+                    <div class="text-emerald-400">mobile-jkn-lda-dashboard/</div>
+                    <div>├── <span class="text-blue-400">data/</span></div>
+                    <div>│   ├── raw_reviews.csv <span class="text-stone-500"># Scraping ulasan v4.18.0</span></div>
+                    <div>│   └── cleaned_reviews.csv <span class="text-stone-500"># Hasil preprocessing</span></div>
+                    <div>├── <span class="text-blue-400">models/</span></div>
+                    <div>│   ├── lda_model.gensim <span class="text-stone-500"># Model LDA terlatih</span></div>
+                    <div>│   └── dictionary.dict</div>
+                    <div>├── <span class="text-blue-400">notebooks/</span></div>
+                    <div>│   └── 01_lda_preprocessing_modeling.ipynb <span class="text-stone-500"># Notebook eksperimen</span></div>
+                    <div>├── app.py <span class="text-stone-500"># Script utama Dashboard Streamlit</span></div>
+                    <div>├── requirements.txt <span class="text-stone-500"># Dependency Python</span></div>
+                    <div>└── README.md <span class="text-stone-500"># Dokumentasi utama proyek</span></div>
+                </div>
+            </div>
+
+            <!-- Tim Peneliti / Contributor GitHub -->
+            <div class="bg-cozy-card border border-cozy-border rounded-xl p-6">
+                <h2 class="text-base font-semibold text-white mb-4">Tim Pengembang / Contributor Proyek</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 font-mono text-xs">
+                    <div class="p-3 bg-stone-900/60 border border-cozy-border rounded-lg flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-stone-400 text-lg"></i>
+                        <div>
+                            <div class="text-white font-semibold">Dony Anggi Wardana</div>
+                            <div class="text-cozy-muted text-[11px]">NIM: 11210930000089</div>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-stone-900/60 border border-cozy-border rounded-lg flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-stone-400 text-lg"></i>
+                        <div>
+                            <div class="text-white font-semibold">M. Hezran Rakhaa B.</div>
+                            <div class="text-cozy-muted text-[11px]">NIM: 11220930000064</div>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-stone-900/60 border border-cozy-border rounded-lg flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-stone-400 text-lg"></i>
+                        <div>
+                            <div class="text-white font-semibold">Khaizuran Asytar</div>
+                            <div class="text-cozy-muted text-[11px]">NIM: 11220930000119</div>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-stone-900/60 border border-cozy-border rounded-lg flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-stone-400 text-lg"></i>
+                        <div>
+                            <div class="text-white font-semibold">Qautsar Al Ghifari</div>
+                            <div class="text-cozy-muted text-[11px]">NIM: 11220930000124</div>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-stone-900/60 border border-cozy-border rounded-lg flex items-center space-x-3">
+                        <i class="fa-brands fa-github text-stone-400 text-lg"></i>
+                        <div>
+                            <div class="text-white font-semibold">Zalfa Rafi P.</div>
+                            <div class="text-cozy-muted text-[11px]">NIM: 11220930000134</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer Repositori -->
+    <footer class="bg-cozy-card border-t border-cozy-border py-6 text-center text-xs text-cozy-muted">
+        <div class="max-w-5xl mx-auto px-4 space-y-1 font-mono">
+            <p>&copy; 2026 Kelompok 7 TOPSUS — Program Studi Sistem Informasi UIN Syarif Hidayatullah Jakarta</p>
+            <p class="text-stone-500 text-[11px]">Licensed under MIT License • Open Source Capstone Project</p>
+        </div>
+    </footer>
+
+</body>
+</html>
